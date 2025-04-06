@@ -128,7 +128,7 @@ select top 1000 * from AGENCIAS
 SELECT TOP 100 NumDoc, DATEDIFF(yy, FechaRegistroGestion, GETDATE())
 FROM OFERTAS
 WHERE FechaRegistroGestion is not null
- 
+
 ---- cuales son los periodos que existen en la tabla ofertas --- PeriodoVigencia
 select DISTINCT Periodovigencia
 from OFERTAS
@@ -233,7 +233,7 @@ WHERE AGENCIA IS NOT NULL AND ESTADO = 'A'
 
 -- Consulta 2: Extraer el a�o de las fechas relacionadas con los colaboradores
 SELECT id, NOMBRE, NACIONALIDAD, 
-	DATEPART(YEAR, FECHAREGISTRO) AS A�o_Registro, DATEPART(YEAR, FechaREG) AS A�o_FechaREG
+	DATEPART(YEAR, FECHAREGISTRO) AS Año_Registro, DATEPART(YEAR, FechaREG) AS Año_FechaREG
 FROM Colaboradores
 WHERE NACIONALIDAD = 'peruano' AND FECHAREGISTRO IS NOT NULL 
 -- Nota: en este ejercicio solo hay 1 registro con fecha en toda la tabla
