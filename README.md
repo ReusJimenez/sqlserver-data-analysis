@@ -12,10 +12,13 @@ Los laboratorios están diseñados para ayudar a mejorar habilidades en la manip
 
 sqlserver-data-analysis/  
 
-│── scripts/  
-│── ├── 01-introduccion.sql  
-│── ├── 02-funciones-fechas.sql  
-│── ├── (más scripts serán añadidos)   
+├── scripts/  
+│   ├── 01-teoriasql.sql  
+│   ├── 02-introduccion.sql  
+│   ├── 03-selects.sql  
+│   ├── 04-funciones-fechas.sql  
+│   ├── 05-joins.sql  
+│   ├── (más scripts serán añadidos)  
 │  
 │── backups/  
 │── ├── bd-final-backup  
