@@ -11,17 +11,23 @@ Los laboratorios están diseñados para ayudar a mejorar habilidades en la manip
 ## 📁 Estructura del Repositorio  
 
 sqlserver-data-analysis/  
-
-├── scripts/  
-│── ├── 01-teoriasql.sql  
-│── ├── 02-introduccion.sql  
-│── ├── 03-selects.sql  
-│── ├── 04-funciones-fechas.sql  
-│── ├── 05-joins.sql  
-│── ├── (más scripts serán añadidos)  
 │  
-│── backups/  
-│── ├── bd-final-backup  
+│── Backups/  
+│── ├── bd-alemania2006-backup.zip  
+│── ├── bd-final-backup.zip  
+│── ├── bd-rusia2018-backup.zip  
+│── ├── bd-ventas2018-backup.zip  
+│  
+├── Labs/  
+│── ├── Lab01_teoriasql.sql  
+│── ├── Lab02_dml-select.sql  
+│── ├── Lab03_condiciones.sql  
+│── ├── Lab04_fechas-funciones.sql  
+│── ├── Lab05_joins.sql  
+│── ├── Lab06_agrupaciones.sql  
+│── ├── Lab07_control-flujo.sql  
+│── ├── Lab08_transacciones.sql  
+│── ├── Lab09_proc-vistas.sql  
 │  
 │── README.md  
 
