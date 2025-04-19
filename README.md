@@ -12,22 +12,22 @@ Los laboratorios están diseñados para ayudar a mejorar habilidades en la manip
 
 sqlserver-data-analysis/  
 │  
-│── Backups/  
+│── backups/  
 │── ├── bd-alemania2006-backup.zip  
 │── ├── bd-final-backup.zip  
 │── ├── bd-rusia2018-backup.zip  
 │── ├── bd-ventas2018-backup.zip  
 │  
-├── Labs/  
-│── ├── Lab01_teoriasql.sql  
-│── ├── Lab02_dml-select.sql  
-│── ├── Lab03_condiciones.sql  
-│── ├── Lab04_fechas-funciones.sql  
-│── ├── Lab05_joins.sql  
-│── ├── Lab06_agrupaciones.sql  
-│── ├── Lab07_control-flujo.sql  
-│── ├── Lab08_transacciones.sql  
-│── ├── Lab09_proc-vistas.sql  
+│── labs/  
+│── ├── lab01-teoria-sql.sql  
+│── ├── lab02-dml-select.sql  
+│── ├── lab03-condiciones.sql  
+│── ├── lab04-fechas-funciones.sql  
+│── ├── lab05-joins.sql  
+│── ├── lab06-agrupaciones.sql  
+│── ├── lab07-control-flujo.sql  
+│── ├── lab08-transacciones.sql  
+│── ├── lab09-proc-vistas.sql  
 │  
 │── README.md  
 
