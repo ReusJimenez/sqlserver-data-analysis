@@ -1,6 +1,6 @@
 # 📊 **SQL Server Data Analysis**  
 
-Scripts para el análisis de datos utilizando **SQL Server**. 📊  
+Laboratorios prácticos sobre el análisis de datos utilizando **SQL Server**. 📊  
 
 ## 📝 **Descripción**  
 
@@ -10,6 +10,7 @@ Los laboratorios están diseñados para ayudar a mejorar habilidades en la manip
 
 ## 📁 Estructura del Repositorio  
 
+```
 sqlserver-data-analysis/  
 │  
 │── backups/  
@@ -30,6 +31,7 @@ sqlserver-data-analysis/
 │── ├── lab09-proc-vistas.sql  
 │  
 │── README.md  
+```
 
 ## 🛠 **Tecnologías Utilizadas**  
 
