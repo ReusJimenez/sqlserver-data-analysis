@@ -8,6 +8,8 @@ Este repositorio contiene una serie de scripts enfocados en el análisis de dato
 
 Los laboratorios están diseñados para ayudar a mejorar habilidades en la manipulación de bases de datos y la extracción de información útil de ellas, aplicando principios fundamentales del análisis de datos.
 
+> 🔒 Este repositorio está en desarrollo activo. El contenido seguirá creciendo conforme avance el aprendizaje.  
+
 ## 📁 Estructura del Repositorio  
 
 ```
