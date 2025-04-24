@@ -8,31 +8,31 @@ Este repositorio contiene una serie de scripts enfocados en el análisis de dato
 
 Los laboratorios están diseñados para ayudar a mejorar habilidades en la manipulación de bases de datos y la extracción de información útil de ellas, aplicando principios fundamentales del análisis de datos.
 
-> 🔒 Este repositorio está en desarrollo activo. El contenido seguirá creciendo conforme avance el aprendizaje.  
+> 🚧 En construcción. El contenido seguirá creciendo conforme avance el aprendizaje.  
 
-## 📁 Estructura del Repositorio  
+## 📁 **Estructura del Repositorio**  
 
 ```
 sqlserver-data-analysis/  
 │  
-│── backups/  
-│── ├── bd-alemania2006-backup.zip  
-│── ├── bd-final-backup.zip  
-│── ├── bd-rusia2018-backup.zip  
-│── ├── bd-ventas2018-backup.zip  
+├── backups/                         # Copias de seguridad de las bases de datos utilizadas  
+│   ├── bd-alemania2006-backup.zip  
+│   ├── bd-final-backup.zip  
+│   ├── bd-rusia2018-backup.zip  
+│   └── bd-ventas2018-backup.zip  
 │  
-│── labs/  
-│── ├── lab01-teoria-sql.sql  
-│── ├── lab02-dml-select.sql  
-│── ├── lab03-condiciones.sql  
-│── ├── lab04-fechas-funciones.sql  
-│── ├── lab05-joins.sql  
-│── ├── lab06-agrupaciones.sql  
-│── ├── lab07-control-flujo.sql  
-│── ├── lab08-transacciones.sql  
-│── ├── lab09-proc-vistas.sql  
+├── labs/                            # Laboratorios organizados por tema  
+│   ├── lab01-teoria-sql.sql              # Conceptos básicos de SQL  
+│   ├── lab02-dml-select.sql              # Consultas SELECT y manipulación de datos  
+│   ├── lab03-condiciones.sql             # Condicionales y operadores  
+│   ├── lab04-fechas-funciones.sql        # Funciones y manejo de fechas  
+│   ├── lab05-joins.sql                   # Joins y relaciones entre tablas  
+│   ├── lab06-agrupaciones.sql            # Agrupaciones y funciones agregadas  
+│   ├── lab07-control-flujo.sql           # Control de flujo (IF, CASE, etc.)  
+│   ├── lab08-transacciones.sql           # Manejo de transacciones  
+│   └── lab09-proc-vistas.sql             # Procedimientos almacenados y vistas  
 │  
-│── README.md  
+└── README.md                        # Documentación del repositorio  
 ```
 
 ## 🛠 **Tecnologías Utilizadas**  
@@ -49,3 +49,8 @@ Si tienes alguna pregunta o sugerencia, no dudes en contactar a:
 - **Nombre:** Roberto Edmundo Eustaquio Jiménez  
 - **Email:** [reusjimenez2002@gmail.com](mailto:reusjimenez2002@gmail.com)  
 - **GitHub:** [https://github.com/ReusJimenez](https://github.com/ReusJimenez)  
+- **LinkedIn:** [https://linkedin.com/in/roberto-eustaquio/](https://linkedin.com/in/roberto-eustaquio/)  
+
+## 📜 **Licencia**  
+
+Este proyecto se distribuye bajo la Licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para más información.
