@@ -1,4 +1,4 @@
--- Creaci�n de las tablas
+-- Creación de las tablas
 CREATE TABLE departamento (
     id_departamento NUMBER PRIMARY KEY,
     nombre_departamento VARCHAR2(100),
@@ -16,7 +16,7 @@ CREATE TABLE empleados (
     CONSTRAINT fk_departamento_empleados FOREIGN KEY (departamento_id) REFERENCES departamento(id_departamento)
 );
 
--- Inserci�n de datos
+-- Inserción de datos
 INSERT INTO departamento VALUES (1, 'Ventas', 'Edificio A', 'Departamento de ventas');
 INSERT INTO departamento VALUES (2, 'Recursos Humanos', 'Edificio B', 'Departamento de recursos humanos');
 INSERT INTO departamento VALUES (3, 'Desarrollo', 'Edificio C', 'Departamento de desarrollo de software');
@@ -231,4 +231,3 @@ BEGIN
 END concatenar_cadenas;
 
 SELECT concatenar_cadenas('Hola', 'Mundo') AS cadena_concatenada FROM dual;
-

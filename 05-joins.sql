@@ -1,13 +1,12 @@
---- SESION 5 =======================================================================
+--- SESIÓN 5 =======================================================================
 --------======inner join==============
 --------colaboradores y agencias
 
-------codigo trabajador  , nombre colaborador , agencia --- alias a , 
+------código trabajador  , nombre colaborador , agencia --- alias a , 
 --- agencia , gerente agencia y su gerente regional alias b
 
 --select * from COLABORADORES
 --select * from AGENCIAS
-
 
 
 --SELECT 
@@ -27,7 +26,6 @@
 
 --dml
 --SELECT 
-
 
 
 --DROP TABLE IF EXISTS WT_COLABORADORES_AGENCIAS_2

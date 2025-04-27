@@ -1,9 +1,9 @@
---- SESION 4 =======================================================================
+--- SESIÓN 4 =======================================================================
 --- FUNCIONES DE FECHA
 
 --- TIPOS DE DATOS
 
---- NUMERICO: INT , NUMERIC , DECIMAL , FLOAT , BIGINT , SMALLINT 
+--- NUMÉRICO: INT , NUMERIC , DECIMAL , FLOAT , BIGINT , SMALLINT 
 --- TEXTO:  VARCHAR , NVARCHAR , CHAR 
 --- FECHA:  DATE , DATETIME
 

@@ -1,8 +1,8 @@
---- SESION 7 =======================================================================
+--- SESIÓN 7 =======================================================================
 
 ------------====begin end=================================
 
-begin ------- creacion de cuentas
+begin ------- creación de cuentas
 
 	SELECT COUNT(*) FROM OFERTAS A	
 	WHERE EXISTS (SELECT 'X' FROM GESTION B WHERE A.NUMDOC=B.NUMDOC)

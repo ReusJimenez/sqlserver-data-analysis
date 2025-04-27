@@ -1,11 +1,11 @@
---- SESION 2 =======================================================================
+--- SESIÓN 2 =======================================================================
 
 --comentarios
 
 /*comandos asdasd
 asdasd
 asd
-asdasd */
+*/
 
 --------control + k  + control + c es comentario
 --asdasd
