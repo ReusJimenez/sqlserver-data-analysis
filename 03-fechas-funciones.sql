@@ -1,11 +1,9 @@
---- SESIÓN 4 =======================================================================
---- FUNCIONES DE FECHA
+--- FUNCIONES DE FECHA ===============================================================
 
---- TIPOS DE DATOS
-
---- NUMÉRICO: INT , NUMERIC , DECIMAL , FLOAT , BIGINT , SMALLINT 
---- TEXTO:  VARCHAR , NVARCHAR , CHAR 
---- FECHA:  DATE , DATETIME
+-- TIPOS DE DATOS
+---- NUMÉRICO: INT , NUMERIC , DECIMAL , FLOAT , BIGINT , SMALLINT 
+---- TEXTO:  VARCHAR , NVARCHAR , CHAR 
+---- FECHA:  DATE , DATETIME
 
 
 --- GETDATE()------------------------------------------------------------------------------------------------
@@ -13,54 +11,54 @@ SELECT GETDATE()  --- DATETIME, devuelve DATE-fecha y TIME-hora
 SELECT GETDATE() - 1 --- ES LA RESTA DE DIAS, es bueno porque es simple
 
 --- uso de CAST (OBTENEMOS EL DATE, no DATETIME)
-select cast( GETDATE()  as date)  --- conversion simple
-select cast ('20250311' as date) --- es un numero pero es compatible porque hace date lo hace 2025-03-11
+SELECT cast( GETDATE() as date)  --- conversion simple
+SELECT cast('20250311' as date) --- es un numero pero es compatible porque hace date lo hace 2025-03-11
 
 --- uso de convert
-select convert( date ,   '20250311' , 112 )  --- conversion con formato
+SELECT convert( date ,   '20250311' , 112 )  --- conversion con formato
 --- para esto se usa una tabla de conversion que se busca en google: 112 o 12 (yyyymmdd), ...
 
 
 --- DATEADD(tipo de intervalo, numero, fecha)----------------------------------------------------------------
-select  DATEADD(day , 1, GETDATE())
-select  DATEADD(dd , +1, '20250311') --es preferible este porque despues se usar mas dd, mm, ...
+SELECT  DATEADD(day , 1, GETDATE())
+SELECT  DATEADD(dd , +1, '20250311') --es preferible este porque después se usar mas dd, mm, ...
 
-select  DATEADD(month , +1, GETDATE())
-select  DATEADD(mm , +1, '20250311')
-select  DATEADD(mm , -1, '20250331') --NOTA: aqui le reste un mes (resto 31 dias), pero como el mes anterior es febrero, lo lleva al 28 como ultimo dia 
-select  DATEADD(mm , +1, '20250228') --NOTA: aqui le sume un mes (sumo 28 dias), pero como el mes actual es febrero, lo lleva al 28 como ultimo dia
+SELECT  DATEADD(month , +1, GETDATE())
+SELECT  DATEADD(mm , +1, '20250311')
+SELECT  DATEADD(mm , -1, '20250331') --NOTA: aquí le reste un mes (resto 31 días), pero como el mes anterior es febrero, lo lleva al 28 como ultimo dia 
+SELECT  DATEADD(mm , +1, '20250228') --NOTA: aquí le sume un mes (sumo 28 días), pero como el mes actual es febrero, lo lleva al 28 como ultimo dia
 
-select  DATEADD(year ,+1, GETDATE())
-select  DATEADD(yy , +1, '20250311')
+SELECT  DATEADD(year ,+1, GETDATE())
+SELECT  DATEADD(yy , +1, '20250311')
 
-select  DATEADD(day ,-1, GETDATE())
-select  DATEADD(dd , -1, '20250311')
+SELECT  DATEADD(day ,-1, GETDATE())
+SELECT  DATEADD(dd , -1, '20250311')
 
-select  DATEADD(month , -1, GETDATE())
-select  DATEADD(mm , -1, '20250311')
+SELECT  DATEADD(month , -1, GETDATE())
+SELECT  DATEADD(mm , -1, '20250311')
 
 
-select  DATEADD(HOUR , +1, GETDATE())
-select  DATEADD(HH , +1, '20250311') --en este caso es preferible getdate(), sino seria colocar '2025-03-11 00:00:00', muy especifico o tedioso
+SELECT  DATEADD(HOUR , +1, GETDATE())
+SELECT  DATEADD(HH , +1, '20250311') --en este caso es preferible getdate(), sino seria colocar '2025-03-11 00:00:00', muy especifico o tedioso
 
-select  DATEADD(MINUTE , +1, GETDATE())
-select  DATEADD(MM , 1, '20250311') --en este caso es preferible getdate(), sino seria colocar '2025-03-11 00:00:00', muy especifico o tedioso
+SELECT  DATEADD(MINUTE , +1, GETDATE())
+SELECT  DATEADD(MM , 1, '20250311') --en este caso es preferible getdate(), sino seria colocar '2025-03-11 00:00:00', muy especifico o tedioso
 
 
 --- DATEDIFF(tipo de intervalo, fecha 1, fecha 2)------------------------------------------------------------
-select datediff(YEAR , '19870201', GETDATE())
-select datediff(MONTH , '19870201', GETDATE())
-select datediff(dd , '19870201', GETDATE())
----select datediff(dd , GETDATE(), '20250311')---en este caso da en negativo, esta mal en resumen
+SELECT datediff(YEAR , '19870201', GETDATE())
+SELECT datediff(MONTH , '19870201', GETDATE())
+SELECT datediff(dd , '19870201', GETDATE())
+---SELECT datediff(dd , GETDATE(), '20250311')---en este caso da en negativo, esta mal en resumen
 
 
 --- DATEPART(tipo de intervalo, fecha)------------------------------------------------------------
-select YEAR(GETDATE())
-select MONTH(GETDATE())
-select DAY(GETDATE())
+SELECT YEAR(GETDATE())
+SELECT MONTH(GETDATE())
+SELECT DAY(GETDATE())
 
---- es necesario el dateparte para cuestiones de HOUR, MINUTE, SECOND, MILLISECOND, ...
---- tambien puedes usarlo con YEAR, MONTH, DAY aunque no es necesario
+--- es necesario el datepart para cuestiones de HOUR, MINUTE, SECOND, MILLISECOND, ...
+--- también puedes usarlo con YEAR, MONTH, DAY aunque no es necesario
 SELECT DATEPART(YEAR,GETDATE())
 SELECT DATEPART(MONTH,GETDATE())
 SELECT DATEPART(DAY,GETDATE())
@@ -70,13 +68,13 @@ SELECT DATEPART(MINUTE,GETDATE())
 SELECT DATEPART(SECOND,GETDATE())
 SELECT DATEPART(MILLISECOND,GETDATE())
 
---- con un solo select se puede llamar a varios,deespues le haces columna si quieres...
+--- con un solo SELECT se puede llamar a varios,deespues le haces columna si quieres...
 SELECT DATEPART(HOUR,GETDATE()) , DATEPART(MINUTE,GETDATE()) 
 
 
 --- EOMONTH(fecha)------------------------------------------------------------------------------------------------
 PRINT DAY(EOMONTH('20250301'))
-select DAY(EOMONTH('20250301'))
+SELECT DAY(EOMONTH('20250301'))
 
 --- FORMAT(fecha, formato)------------------------------------------------------------------------------------------------
 PRINT FORMAT(cast('20250311' as date), 'yyyy*_*MM*_*dd')   --- CONVIERTE A TEXTO, NECESITA UN FORMATO
@@ -94,7 +92,7 @@ PRINT FORMAT(cast('2025-03-11' as date), 'yyyyMM01')   --- CONVIERTE A TEXTO, NE
 PRINT cast(FORMAT(cast('20250311' as date), 'yyyyMM01') as date)  --- CONVIERTE A TEXTO, NECESITA UN FORMATO
 PRINT cast(FORMAT(getdate(), 'yyyyMM01') as date)  --- CONVIERTE A TEXTO, NECESITA UN FORMATO
 
-select dateadd(day, -(DAY('20250321')-1) , cast('20250321' as date) ) ----- forma mas compleja haciendo calculos raros, el de arriba es mas optimo con cast y format
+SELECT dateadd(day, -(DAY('20250321')-1) , cast('20250321' as date) ) ----- forma mas compleja haciendo calculos raros, el de arriba es mas optimo con cast y format
 
 
 --- DATENAME(tipo de intervalo, fecha)------------------------------------------------------------------------------------------------
@@ -119,30 +117,30 @@ SELECT ISDATE('2025-02-28');
 
 -----------------------------------PRACTICAR----------------------------------------
 -- conociendo las tablas
-select top 1000 * from OFERTAS
-select top 1000 * from GESTION_DETALLE
-select top 1000 * from GESTION
-select top 1000 * from COLABORADORES
-select top 1000 * from AGENCIAS
+SELECT top 1000 * from OFERTAS
+SELECT top 1000 * from GESTION_DETALLE
+SELECT top 1000 * from GESTION
+SELECT top 1000 * from COLABORADORES
+SELECT top 1000 * from AGENCIAS
 
 SELECT TOP 100 NumDoc, DATEDIFF(yy, FechaRegistroGestion, GETDATE())
 FROM OFERTAS
 WHERE FechaRegistroGestion is not null
 
 ---- cuales son los periodos que existen en la tabla ofertas --- PeriodoVigencia
-select DISTINCT Periodovigencia
+SELECT DISTINCT Periodovigencia
 from OFERTAS
 
 ---- cuales son los productos que existen en la tabla ofertas --- codigo_producto
-select DISTINCT codigo_producto
+SELECT DISTINCT codigo_producto
 from OFERTAS
 
 ------------------conteo de ofertas entre 3 meses-----------------------------
 -- primero:
-select MIN(FechaRegistroGestion) , MAX(FechaRegistroGestion) from OFERTAS
+SELECT MIN(FechaRegistroGestion) , MAX(FechaRegistroGestion) from OFERTAS
 -- 2021-05-07 12:12:00				2023-09-01 19:10:00
 
-select COUNT(*) from OFERTAS
+SELECT COUNT(*) from OFERTAS
 where cast(FechaRegistroGestion as date) >= '20210501' and cast( FechaRegistroGestion  as date)    <=  '20230901'
 -- NOTA MUY IMPORTANTE:
 -- se usa el cast (... as date) porque sino no se toma todos los registros, es decir, si hubo un registro el 202408 a las 01:00:00 no contaria
@@ -150,7 +148,7 @@ where cast(FechaRegistroGestion as date) >= '20210501' and cast( FechaRegistroGe
 -- sin cast: 160 916
 -- con cast: 161 559
 
-select COUNT(*) from OFERTAS
+SELECT COUNT(*) from OFERTAS
 where cast(FechaRegistroGestion as date)  between  '20210501' and '20230901'  
 -- NOTA MUY IMPORTANTE (se repite la explicacion):
 -- se usa el cast (... as date) porque sino no se toma todos los registros, es decir, si hubo un registro el 202408 a las 01:00:00 no contaria
@@ -159,11 +157,11 @@ where cast(FechaRegistroGestion as date)  between  '20210501' and '20230901'
 -- con cast: 161 559
 
 -- practica agregando 3 meses mas
-select COUNT(*) from OFERTAS
+SELECT COUNT(*) from OFERTAS
 where cast(FechaRegistroGestion as date) between '20210501' and dateadd(mm,+3,'20210501')
 
 -- practica agregando 1 anio mas
-select COUNT(*) from OFERTAS
+SELECT COUNT(*) from OFERTAS
 where cast(FechaRegistroGestion as date) between '20210501' and dateadd(yy,+1,'20210501')
 
 
@@ -186,7 +184,7 @@ where cast(FechaRegistroGestion as date) between '20210501' and dateadd(yy,+1,'2
 
 --------cuantos periodos se tienen a razon de la Fecha de registro de gestion---------------
 -- periodo = mes y el anio
-select distinct format(FechaRegistroGestion, 'yyyyMM') from OFERTAS
+SELECT distinct format(FechaRegistroGestion, 'yyyyMM') from OFERTAS
 where FechaRegistroGestion is not null
 
 

@@ -1,5 +1,4 @@
---- Introducción ======================================================================================
-
+--- Introducción ====================================================================
 --DQL: SELECT
 ----Según ciertos autores, SELECT pertenece a DML
 ----DML: SELECT , INSERT , DELETE , UPDATE
@@ -9,82 +8,62 @@
 ----control + k  + control + u = descomento
 ----control + r = mostrar/ocultar ventana de resultados
 
+--Para tener información de una columna
+----ALT + F1 + sombrear nombre de columna elegida (AGENCIAS)
+----O, ejecutar: SP_HELP 'AGENCIAS'
+
+-- ====================================================================
+-- CONSULTA NO NOMINAL
 SELECT * FROM AGENCIAS
-
 SELECT TOP 10 * FROM AGENCIAS
-
------- CONSULTA NO NOMINAL
-SELECT TOP 20 * FROM AGENCIAS
-
 SELECT TOP 30 PERCENT * FROM AGENCIAS
 
----COUNT------------------------------------
-SELECT COUNT(*)
+-- CONSULTA NOMINAL
+-- Contiene nombre de columnas
+SELECT
+	AGENCIA,
+	FechaApertura
 FROM AGENCIAS
 
--------------------------------------------
-SELECT TOP 10
-	AGENCIA, CLUSTER
-FROM AGENCIAS
+SELECT TOP 10 AGENCIA, FechaApertura FROM AGENCIAS
 
------- CONSULTA NOMINAL
-----ALT + F1  --- SP_HELP 'AGENCIAS'
+-- ====================================================================
+--SELECT POR COLUMNAS
+---- Select con todas las columnas (Con Management)
+---- Clic derecho en tabla, Script Table as, SELECT TO, Clipboard
+SELECT [AGENCIA]
+      ,[GERENTE_REGIONAL]
+      ,[GERENTE_AGENCIA]
+      ,[FechaApertura]
+FROM [dbo].[AGENCIAS]
 
-SELECT *
-FROM AGENCIAS
--------------------------------------------
+---- Select con todas las columnas (Con multicursor)
+---- SHIFT + ALT + Flecha hacia abajo
 SELECT
 	AGENCIA
-	, FechaApertura
-FROM AGENCIAS
--------------------------------------------
-
--- SP_HELP 'OFERTAS' 
-
-------SHIFT + ALT Y FLECHA HACIA ABAJO
-SELECT TOP 10
-	id
-	, NumDoc
-	, codigo_producto
-	, CODIGO_TRABAJADOR
-	, Tipo_Producto
-	, Fecha_Vencimiento
-	, Tasa_Original
-	, undtiempoplazo
-	, Deuda
-	, EstadoGestion
-	, FechaRegistroGestion
-	, VariacionProductos
-	, productos
-	, flg_validacionDNI
-	, flg_validacionDNI1
+	,GERENTE_REGIONAL
+	,GERENTE_AGENCIA
+	,FechaApertura
 FROM OFERTAS
 
---------------================================================
+-- ====================================================================
+--LOS ALIAS
+---- Alias en tablas
+SELECT A.AGENCIA, A.FechaApertura FROM AGENCIAS AS A
+SELECT B.AGENCIA, B.FechaApertura FROM AGENCIAS B --Se puede omitir AS, si esta bien estructurado
+SELECT TB_1.AGENCIA, TB_1.FechaApertura FROM AGENCIAS TB_1
+SELECT [TB 2].AGENCIA, [TB 2].FechaApertura FROM AGENCIAS [TB 2]
 
------------LOS ALIAS ------- TABLAS -- ALIAS DE COLUMNAS
+---- Alias en columnas
+PRINT 'HOLA MUNDO'  --Funcionamiento tipico
 
------------LOS ALIAS ------- TABLAS
-SELECT A.AGENCIA , A.CLUSTER
-FROM AGENCIAS AS A
-SELECT B.AGENCIA , B.CLUSTER
-FROM AGENCIAS AS B
-
-SELECT [TB 1].AGENCIA , [TB 1].CLUSTER
-FROM AGENCIAS [TB 1]
-SELECT [TB 2].AGENCIA , [TB 2].CLUSTER
-FROM AGENCIAS [TB 2]
-
-----------========================================
-
-PRINT 'HOLA MUNDO'
-----------ALIAS DE COLUMNAS
-
+SELECT 'HOLA MUNDO' --Funciona en formato tabla, pero no dice nombre de columna
 SELECT 'HOLA MUNDO' AS MENSAJE
-SELECT 'HOLA MUNDO'  [% INDICADORES DE MORA DE CONTENCI�N]
+SELECT 'HOLA MUNDO' [% INDICADORES DE MORA DE CONTENCIÓN] --Se puede omitir AS, si esta bien estructurado
 
-SELECT A.AGENCIA , A.CLUSTER [GERENTE DE ZONAL DE AGENCIAS]
+---- Alias en tablas y columnas
+SELECT A.AGENCIA, A.GERENTE_AGENCIA [GERENTE ZONAL DE AGENCIAS] 
 FROM AGENCIAS AS A
 
-SELECT COUNT(*) AS [CANTIDAD DE REGISTROS]
+SELECT COUNT(*) AS [CANTIDAD DE REGISTROS] 
 FROM AGENCIAS
