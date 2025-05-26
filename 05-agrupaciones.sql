@@ -1,4 +1,4 @@
---- SESIÓN 6 =======================================================================
+--- AGRUPACIONES ====================================================================
 
 select   tasa , count(*) from ofertas
 group by tasa
@@ -33,7 +33,7 @@ order by 1
 --select count(*)from OFERTAS where Tasa = 12
 
 ------between
-------presentacion de datos
+------presentación de datos
 ------orden
 
 --<> --- abierto
@@ -58,7 +58,8 @@ from
 	----------=================================
 select RangoTasa ,COUNT(*) cant  from #tempLocalNixx
 group by RangoTasa
-order by 1 
+order by 1
+
 --------========================retoooo=========================
 --------cuantas lineas tenemos rango de lineas 
 ------0k -1k
@@ -71,8 +72,6 @@ order by 1
 ------>100k
 
 --select MAX(Linea), MIN(Linea),AVG(Linea) from OFERTAS
-
-
 
 
 --select 
@@ -153,8 +152,6 @@ group by flgColaboradorAsignado,flgVenta,flgVentaPerdida,flgVentaPotencial
 
 
 
-
-
 select * from COLABORADORES A
 where A.agencia in  (select TOP 10 B.agencia from AGENCIAS B where B.agencia like 'AG. CA%') --SUBCONSULTA ANIDADA
 
@@ -175,8 +172,6 @@ WHERE A.NUMDOC IN (SELECT B.NUMDOC FROM GESTION B )
 
 SELECT COUNT(*) FROM OFERTAS A INNER JOIN (SELECT DISTINCT NUMDOC,TELEFONO FROM CLIENTES) C ON A.NUMDOC = C.NUMDOC
 WHERE EXISTS (SELECT 'X' FROM GESTION B WHERE A.NUMDOC = B.NUMDOC AND B.TelefonoRegistrado = C.telefono           )
-
-
 
 
 SELECT COUNT(*) FROM OFERTAS A INNER JOIN CLIENTES C ON A.NUMDOC = C.NUMDOC

@@ -6,8 +6,7 @@ Este repositorio contiene una serie de scripts de mi aprendizaje en el análisis
 
 ## 🛠️ Tecnologías Utilizadas
 
-- 🖥️ SQL Server
-- 🛠️ SQL (Transact-SQL)
+- 🛢️ SQL Server (Transact-SQL)
 - 💾 Manejo de bases de datos y consultas complejas
 - 🔒 Transacciones, Procedimientos y Triggers
 

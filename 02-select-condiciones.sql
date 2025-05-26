@@ -1,6 +1,6 @@
 --- SELECT y condicionales ==========================================================
 
---EJEMPLO COMPLETO
+--EJEMPLO COMPLETO DE "THE BIG 6 STATEMENTS IN SQL"
 SELECT SEXO , COUNT(*) CANT
 FROM CLIENTES
 WHERE NOMBRE IS NOT NULL

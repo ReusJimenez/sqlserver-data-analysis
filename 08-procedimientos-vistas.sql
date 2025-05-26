@@ -1,6 +1,4 @@
---- SESIÓN 9 =======================================================================
-
-------------=========FUNCIONES , PROCEDIMIENTOS Y VISTAS=============================
+--- FUNCIONES, PROCEDIMIENTOS Y VISTAS ==============================================
 
 CREATE FUNCTION [dbo].[FunctionName_nixx]
 (

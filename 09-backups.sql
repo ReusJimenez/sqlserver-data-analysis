@@ -1,4 +1,4 @@
---- BACKUPS =======================================================================
+--- BACKUPS =========================================================================
 
 --BACKUP 1
 --Crear la tabla OFERTAS en la base [bd-pruebas].
@@ -27,26 +27,26 @@ WITH
 
 -- ========= Caso Propuesto =========
 
---El área de Riesgos identificó clientes donde se les podría mejorar las condiciones de su crédito. Tanto en tasa, como en monto.
---Iniciaremos un campaña por SMS, para indicar a los clientes las mejoras del crédito, se necesitará crear un speech que sea personalizado 
+--El ï¿½rea de Riesgos identificï¿½ clientes donde se les podrï¿½a mejorar las condiciones de su crï¿½dito. Tanto en tasa, como en monto.
+--Iniciaremos un campaï¿½a por SMS, para indicar a los clientes las mejoras del crï¿½dito, se necesitarï¿½ crear un speech que sea personalizado 
 --por clientes que contenga los productos que tiene.
---Al ser campaña por SMS, debemos descartar clientes que no tengan teléfonos, clientes que estén reportados, clientes que ya obtuvieron el 
---crédito, validamos teléfonos que sean correctos en formato
+--Al ser campaï¿½a por SMS, debemos descartar clientes que no tengan telï¿½fonos, clientes que estï¿½n reportados, clientes que ya obtuvieron el 
+--crï¿½dito, validamos telï¿½fonos que sean correctos en formato
 --En algunos casos son clientes y en otros son prospectos de clientes nuevos:
---	Los que son clientes tendrán un speech con la designación de Sr. O Sra. Y el nombre y las condiciones del producto.
+--	Los que son clientes tendrï¿½n un speech con la designaciï¿½n de Sr. O Sra. Y el nombre y las condiciones del producto.
 --	Los prospectos a clientes nuevos, solo indicaremos Estimad@
 
--- ========= Solución =========
+-- ========= Soluciï¿½n =========
 
---Importación de datos (3 métodos)
---Genera una base única de clientes sin repeticiones 
---Agrégale los campos teléfono , nombre y sexo
---Actualízale el ultimo numero de teléfono , nombre, resultado de ultima gestión y sexo de la base de clientes
---Actualízale el ultimo numero de teléfono de la base de gestión
+--Importaciï¿½n de datos (3 mï¿½todos)
+--Genera una base ï¿½nica de clientes sin repeticiones 
+--Agrï¿½gale los campos telï¿½fono , nombre y sexo
+--Actualï¿½zale el ultimo numero de telï¿½fono , nombre, resultado de ultima gestiï¿½n y sexo de la base de clientes
+--Actualï¿½zale el ultimo numero de telï¿½fono de la base de gestiï¿½n
 --Elimina los clientes de la tabla blacklist
---Eliminamos los que tienen gestión según criterio
---Genera la base única de ofertas
---Exportar la data (2 métodos)
+--Eliminamos los que tienen gestiï¿½n segï¿½n criterio
+--Genera la base ï¿½nica de ofertas
+--Exportar la data (2 mï¿½todos)
 
 
 

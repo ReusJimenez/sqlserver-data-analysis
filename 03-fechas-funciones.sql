@@ -15,7 +15,7 @@ SELECT cast( GETDATE() as date)  --- conversion simple
 SELECT cast('20250311' as date) --- es un numero pero es compatible porque hace date lo hace 2025-03-11
 
 --- uso de convert
-SELECT convert( date ,   '20250311' , 112 )  --- conversion con formato
+SELECT convert(date , '20250311' , 112 )  --- conversion con formato
 --- para esto se usa una tabla de conversion que se busca en google: 112 o 12 (yyyymmdd), ...
 
 
@@ -107,10 +107,10 @@ print FORMAT(cast('2025-03-11' as date) , 'ddd' ) --arroja el formato corto en l
 print FORMAT(cast('2025-03-11' as date) , 'dddd' ) --arroja el formato largo en letras
 print FORMAT(cast('2025-03-11' as date) , 'mmm' ) --arroja el formato corto en letras
 print FORMAT(cast('2025-03-11' as date) , 'mmmm' ) --arroja el formato largo en letras
--- para yyyy no funciona como tal al parecer, o saldria lo mismo
+-- para yyyy no funciona como tal al parecer, o saldría lo mismo
 
 
---- ISDATE(expresion)------------------------------------------------------------------------------------------------
+--- ISDATE(expresión)------------------------------------------------------------------------------------------------
 SELECT ISDATE('2025-02-28');
 --- 0 es No, 1 es Si
 
@@ -150,7 +150,7 @@ where cast(FechaRegistroGestion as date) >= '20210501' and cast( FechaRegistroGe
 
 SELECT COUNT(*) from OFERTAS
 where cast(FechaRegistroGestion as date)  between  '20210501' and '20230901'  
--- NOTA MUY IMPORTANTE (se repite la explicacion):
+-- NOTA MUY IMPORTANTE (se repite la explicación):
 -- se usa el cast (... as date) porque sino no se toma todos los registros, es decir, si hubo un registro el 202408 a las 01:00:00 no contaria
 -- porque sin el cast, solo se cuenta hasta las 00:00:00, asi que es preferible contar las de todo el dia, es decir, USAR EL CAST
 -- sin cast: 160 916
@@ -165,7 +165,7 @@ SELECT COUNT(*) from OFERTAS
 where cast(FechaRegistroGestion as date) between '20210501' and dateadd(yy,+1,'20210501')
 
 
--- DUDA de un companera sobre como saber dias habiles de lunes a viernes
+-- DUDA de un compañera sobre como saber días hábiles de lunes a viernes
 -- id , fechaCierre , fechaProceso...... diahabil 
 ------por transcurridos
 
